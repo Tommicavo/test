@@ -3,7 +3,7 @@ package model.bean;
 import java.time.LocalDateTime;
 
 public class UserBean {
-	
+
 	private Long idUser;
 	private String firstNameUser;
 	private String lastNameUser;
@@ -77,7 +77,7 @@ public class UserBean {
 	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "" +
@@ -87,6 +87,7 @@ public class UserBean {
 				"Email: " + getEmailUser() + "\n" +
 				"Password: " + getPasswordUser() + "\n" +
 				"Deleted: " + isDeletedUser() + "\n" +
-				"Id Role: " + getIdRole() + "\n";
+				"Premium: " + isPremiumUser() + "\n" +
+				"Id Role: " + getIdRole();
 	}	
 }

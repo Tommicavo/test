@@ -15,8 +15,7 @@ import utils.DbConnection;
 
 public class BookDao {
 	
-	
-	public List<Map<UserBean, Integer>> findUsersWithMoreThanFiveBooks() { 
+	public List<Map<UserBean, Integer>> findAllUsersWithMoreThanFiveBooks() { 
 	    String query = "SELECT user.*, COUNT(id_book) AS book_count FROM user\r\n"
 	            + "JOIN book ON user.id_user = book.id_client\r\n"
 	            + "GROUP BY user.id_user\r\n"
@@ -43,7 +42,7 @@ public class BookDao {
 	            userBean.setUpdateDateUser(rs.getTimestamp("update_date").toLocalDateTime());
 	            userBean.setDeletedUser(rs.getBoolean("is_deleted"));
 	            userBean.setPremiumUser(rs.getBoolean("is_premium"));
-	            userBean.setIdRole(rs.getLong("id_role"));	            
+	            userBean.setIdRole(rs.getLong("id_role"));            
 
 	            int bookCount = rs.getInt("book_count");
 
@@ -96,8 +95,7 @@ public class BookDao {
 				bookBean.setLowBook(rs.getBoolean("is_low"));
 				bookBean.setPublicationDateBook(rs.getDate("publication_date").toLocalDate());
 				
-				books.add(bookBean);
-				
+				books.add(bookBean);	
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

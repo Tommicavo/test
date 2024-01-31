@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.bean.UserBean;
 import model.dao.BookDao;
+import service.BookService;
 
 @WebServlet("/Query1Servlet")
 public class Query1Servlet extends HttpServlet {
@@ -19,8 +20,8 @@ public class Query1Servlet extends HttpServlet {
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    	BookDao bookDao = new BookDao();
-    	List<Map<UserBean, Integer>> result = bookDao.findUsersWithMoreThanFiveBooks();
+    	BookService bookService = new BookService();
+    	List<Map<UserBean, Integer>> result = bookService.findUsersWithMoreThanFiveBooks();
     	
     	request.setAttribute("result", result);
         RequestDispatcher rd = request.getRequestDispatcher("/query1.jsp");

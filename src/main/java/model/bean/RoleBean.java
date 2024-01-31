@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class RoleBean {
 	
 	private Long idRole;
-	private String label;
+	private String labelRole;
 	private LocalDateTime insertDateUser;
 	private LocalDateTime updateDateUser;
 	private boolean isDeletedUser;
@@ -18,11 +18,11 @@ public class RoleBean {
 	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
-	public String getLabel() {
-		return label;
+	public String getLabelRole() {
+		return labelRole;
 	}
-	public void setLabel(String label) {
-		this.label = label;
+	public void setLabelRole(String labelRole) {
+		this.labelRole = labelRole;
 	}
 	public LocalDateTime getInsertDateUser() {
 		return insertDateUser;

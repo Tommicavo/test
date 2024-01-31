@@ -5,13 +5,14 @@ import java.util.Map;
 import model.bean.BookBean;
 import model.bean.UserBean;
 import model.dao.BookDao;
+import model.dao.UserDao;
 
 public class App {
     public static void main(String[] args) {
         BookDao bookDao = new BookDao();
-        
+        /*
         // QUERY 1
-        List<Map<UserBean, Integer>> result = bookDao.findUsersWithMoreThanFiveBooks(); // HAVING BOOK_COUNT >= 1!
+        List<Map<UserBean, Integer>> result = bookDao.findAllUsersWithMoreThanFiveBooks(); // HAVING BOOK_COUNT >= 1!
 
         for (Map<UserBean, Integer> map : result) {
             for (Map.Entry<UserBean, Integer> entry : map.entrySet()) {
@@ -29,6 +30,7 @@ public class App {
         for (BookBean book : books) {
         	System.out.println(book);
         }
+        */
         
         // QUERY 3
         List<Map<String, Integer>> titleCountMap = bookDao.getBooksCount();
@@ -41,6 +43,6 @@ public class App {
                 System.out.println("Title: " + title + ", Count: " + count);
                 System.out.println("----------------------------------------");
             }
-        }   
+        }
     }
 }

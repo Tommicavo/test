@@ -7,9 +7,9 @@ public class AuthorBean {
 	private Long idAuthor;
 	private String firstNameAuthor;
 	private String lastNameAuthor;
-	private LocalDateTime insertDateUser;
-	private LocalDateTime updateDateUser;
-	private boolean isDeletedUser;
+	private LocalDateTime insertDateAuthor;
+	private LocalDateTime updateDateAuthor;
+	private boolean isDeletedAuthor;
 	
 	public AuthorBean() {}
 
@@ -31,22 +31,22 @@ public class AuthorBean {
 	public void setLastNameAuthor(String lastNameAuthor) {
 		this.lastNameAuthor = lastNameAuthor;
 	}
-	public LocalDateTime getInsertDateUser() {
-		return insertDateUser;
+	public LocalDateTime getInsertDateAuthor() {
+		return insertDateAuthor;
 	}
-	public void setInsertDateUser(LocalDateTime insertDateUser) {
-		this.insertDateUser = insertDateUser;
+	public void setInsertDateAuthor(LocalDateTime insertDateAuthor) {
+		this.insertDateAuthor = insertDateAuthor;
 	}
-	public LocalDateTime getUpdateDateUser() {
-		return updateDateUser;
+	public LocalDateTime getUpdateDateAuthor() {
+		return updateDateAuthor;
 	}
-	public void setUpdateDateUser(LocalDateTime updateDateUser) {
-		this.updateDateUser = updateDateUser;
+	public void setUpdateDateAuthor(LocalDateTime updateDateAuthor) {
+		this.updateDateAuthor = updateDateAuthor;
 	}
-	public boolean isDeletedUser() {
-		return isDeletedUser;
+	public boolean isDeletedAuthor() {
+		return isDeletedAuthor;
 	}
-	public void setDeletedUser(boolean isDeletedUser) {
-		this.isDeletedUser = isDeletedUser;
+	public void setDeletedAuthor(boolean isDeletedAuthor) {
+		this.isDeletedAuthor = isDeletedAuthor;
 	}
 }
